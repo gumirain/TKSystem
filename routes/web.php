@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +15,4 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('hello', function () {
-    return  '<html><head><title>HELLO</title></head><body><p>こんにちは</p></body></html>';
 });
