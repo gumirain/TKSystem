@@ -13,6 +13,8 @@
 </style>
 <body>
     <h1>Index</h1>
-    <p>This is a sample page with php-template.</p>
+    <p><?= $msg?></p>
+    <p style="color:red;">ユーザー[<?= $id?>]さんでログイン中</p>
+    <p><?= date("Y年n月j日");?></p>
 </body>
 </html>

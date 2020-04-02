@@ -36,7 +36,9 @@ class HelloControllerEx extends Controller
           return $res;
     }
 
-    public function index1(){
-        return view('hello.index');
+    public function index1($id='zero'){
+        $data = ['msg'=>'これは、コントローラーから渡されたメッセージです。',
+                  'id'=>$id];
+        return view('hello.index', $data);
     }
 }
