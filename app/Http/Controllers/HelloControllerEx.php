@@ -11,7 +11,6 @@ class HelloControllerEx extends Controller
        
 
         $html = <<<EOF
-
          <html>
          <head>
          <title>HelloEx</title>
