@@ -35,4 +35,8 @@ class HelloControllerEx extends Controller
           $res->setContent($html);
           return $res;
     }
+
+    public function index1(){
+        return view('hello.index');
+    }
 }
