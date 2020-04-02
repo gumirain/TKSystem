@@ -25,4 +25,6 @@ Route::get('hello', 'HelloController@index');
 Route::get('hello/other', 'HelloController@other');
 Route::get('hellosub', 'HelloControllerSub');
 Route::get('helloex', 'HelloControllerEx@index');
-Route::get('helloex1', 'HelloControllerEx@index1');
+
+Route::get('helloex1/{id?}', 'HelloControllerEx@index1');
+Route::get('helloex2', 'HelloControllerEx@index2');
