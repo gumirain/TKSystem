@@ -36,15 +36,34 @@ class HelloControllerEx extends Controller
           return $res;
     }
 
-    public function index1($id='zero',Request $req){
+    public function index1($id='zero',Request $req)
+    {
         $data = ['msg'=>'これは、コントローラーから渡されたメッセージです。',
                   'id'=>$req->id];
         return view('hello.index', $data);
     }
 
-    public function index2(Request $req){
-        $data = ['msg'=>'これは、Bladeを利用したサンプルです。',
-                ];
+    public function index2(Request $req)
+    {
+        $data = ['msg'=>'これは、Bladeを利用したサンプルです。',];
         return view('hello.index', $data);
     }
+
+    public function index3(){
+        $data = ['msg'=>'',];
+        return view('hello.index', $data);
+    }
+
+    public function post(Request $req)
+    {
+       $msg = $req->msg;
+       $data = ['msg'=>$msg];
+       return view('hello.index', $data);
+    }
+
+    public function index4()
+    {
+        return view('hello.index4');
+    }
+
 }
