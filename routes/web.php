@@ -32,3 +32,6 @@ Route::get('helloex2', 'HelloControllerEx@index2');
 Route::get('helloex3', 'HelloControllerEx@index3');
 Route::post('helloex3', 'HelloControllerEx@post');
 Route::get('helloex4', 'HelloControllerEx@index4');
+Route::get('helloex5', 'HelloControllerEx@index5');
+
+Route::get('hellodb', 'HelloControllerDb@index');

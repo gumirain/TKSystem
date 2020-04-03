@@ -65,4 +65,9 @@ class HelloControllerEx extends Controller
         return view('hello.index4');
     }
 
+    public function index5()
+    {
+        return view('hello.index5');
+    }
+
 }
