@@ -11,6 +11,17 @@
     <p>TKSYSTEM</p>
     <p>管理者一覧</p>
     <table>
+    @foreach ($data2 as $item)
+    <tr>
+      <th>{{$item['name']}}</th>
+      <td>{{$item['mail']}}</td>
+      <td>{{$item['age']}}</td>
+    </tr>    
+    @endforeach
+    </table>
+    <p>Controller value<br>'message'={{$message}}</p>
+    <p>ViewComposer value<br>'view_message'={{$view_message}}</p>
+    <table>
       <tr><th>Name</th><th>Mail</th><th>Age</th></tr>
       @foreach ($items as $item)
           <tr>
@@ -20,6 +31,9 @@
           </tr>
       @endforeach
     </table>
+
+   @include('components.message', ['msg_title'=>'OK',
+      'msg_content'=>'サブビューです。'])
 
    @component('components.message')
      @slot('msg_title')
@@ -31,6 +45,9 @@
      @endslot
    @endcomponent
 
+   <ul>
+       @each('components.item', $data,'item')
+   </ul>
 @endsection
 
 @section('footer')

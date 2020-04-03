@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\HelloMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,7 @@ Route::post('helloex3', 'HelloControllerEx@post');
 Route::get('helloex4', 'HelloControllerEx@index4');
 Route::get('helloex5', 'HelloControllerEx@index5');
 
-Route::get('hellodb', 'HelloControllerDb@index');
+Route::get('hellodb', 'HelloControllerDb@index')
+          ->middleware(HelloMiddleware::class);
+Route::get('hellodb2', 'HelloControllerDb@index2');
+        
