@@ -11,9 +11,9 @@ class HelloControllerDb extends Controller
     {
       $items = DB::select('select * from people');
       $data = [
-               ['name'=>'山田たろう','mail'=>'taro@yamada','age'=>23],
-               ['name'=>'田中はなこ','mail'=>'hanako@tanaka','age'=>24],
-               ['name'=>'鈴木さちこ','mail'=>'satiko@suzuki','age'=>25],
+               ['name'=>'山田たろう','email'=>'taro@yamada','age'=>23],
+               ['name'=>'田中はなこ','email'=>'hanako@tanaka','age'=>24],
+               ['name'=>'鈴木さちこ','email'=>'satiko@suzuki','age'=>25],
               ];
       return view('hello.index5',['items' => $items,'data' => $data,
                    'message' => 'Hello!','data2'=>$req->data2]);

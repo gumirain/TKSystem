@@ -1,1 +1,1 @@
-<li>{{$item['name']}}[{{$item['mail']}}]--{{$item['age']}}才</li>
+<li>{{$item['name']}}[{{$item['email']}}]--{{$item['age']}}才</li>

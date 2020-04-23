@@ -23,6 +23,7 @@ Route::get('helloview', function () {
 });
 
 Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');
 Route::get('hello/other', 'HelloController@other');
 Route::get('hellosub', 'HelloControllerSub');
 Route::get('helloex', 'HelloControllerEx@index');
@@ -38,4 +39,6 @@ Route::get('helloex5', 'HelloControllerEx@index5');
 Route::get('hellodb', 'HelloControllerDb@index')
           ->middleware(HelloMiddleware::class);
 Route::get('hellodb2', 'HelloControllerDb@index2');
+
+Route::get('person', 'PersonController@index');
         
